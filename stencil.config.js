@@ -1,6 +1,6 @@
 exports.config = {
   bundles: [
-    { components: ['my-name'] }
+    { components: ['stereo-scope'] }
   ],
   collections: [
     { name: '@stencil/router' }

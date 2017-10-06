@@ -6,28 +6,28 @@
 
 import '@stencil/router';
 
-import { MyName as MyName } from './components/my-name/my-name';
+import { StereoScope as StereoScope } from './components/stereo-scope/stereo-scope';
 
-interface HTMLMyNameElement extends MyName, HTMLElement {
+interface HTMLStereoScopeElement extends StereoScope, HTMLElement {
 }
-declare var HTMLMyNameElement: {
-  prototype: HTMLMyNameElement;
-  new (): HTMLMyNameElement;
+declare var HTMLStereoScopeElement: {
+  prototype: HTMLStereoScopeElement;
+  new (): HTMLStereoScopeElement;
 };
 declare global {
   interface HTMLElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+      "stereo-scope": HTMLStereoScopeElement;
   }
   interface ElementTagNameMap {
-      "my-name": HTMLMyNameElement;
+      "stereo-scope": HTMLStereoScopeElement;
   }
   namespace JSX {
       interface IntrinsicElements {
-          "my-name": JSXElements.MyNameAttributes;
+          "stereo-scope": JSXElements.StereoScopeAttributes;
       }
   }
   namespace JSXElements {
-      export interface MyNameAttributes extends HTMLAttributes {
+      export interface StereoScopeAttributes extends HTMLAttributes {
         
           first?: any,
           last?: any

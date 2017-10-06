@@ -1,17 +1,17 @@
 import { flush, render } from '@stencil/core/testing';
-import { MyName } from './my-name';
+import { StereoScope } from './stereo-scope';
 
-describe('my-name', () => {
+describe('stereo-scope', () => {
   it('should build', () => {
-    expect(new MyName()).toBeTruthy();
+    expect(new StereoScope()).toBeTruthy();
   });
 
   describe('rendering', () => {
     let element;
     beforeEach(async () => {
       element = await render({
-        components: [MyName],
-        html: '<my-name></my-name>'
+        components: [StereoScope],
+        html: '<stereo-scope></stereo-scope>'
       });
     });
 
