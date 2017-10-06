@@ -30,7 +30,10 @@ declare global {
       export interface StereoScopeAttributes extends HTMLAttributes {
         
           first?: any,
-          last?: any
+          last?: any,
+          showSpeedRange?: any,
+          imageOne?: any,
+          imageTwo?: any
       }
   }
 }
