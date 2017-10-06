@@ -29,8 +29,6 @@ declare global {
   namespace JSXElements {
       export interface StereoScopeAttributes extends HTMLAttributes {
         
-          first?: any,
-          last?: any,
           showSpeedRange?: any,
           imageOne?: any,
           imageTwo?: any

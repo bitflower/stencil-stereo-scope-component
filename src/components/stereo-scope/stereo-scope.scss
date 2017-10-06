@@ -1,10 +1,5 @@
 stereo-scope {
-  input,
-  canvas {
-    display: block;
+  input {
+  	position: absolute;
   }
-  font-family: Courier New,
-  Courier,
-  monospace;
-  font-weight: bold;
 }

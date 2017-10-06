@@ -13,9 +13,6 @@ export class StereoScope {
   speedHalf: number = Math.floor(this.speed / 2);
   i: number = 0;
 
-  @Prop() first: string;
-  @Prop() last: string;
-
   @Prop() showSpeedRange: string = 'false';
   @Prop() imageOne: string;
   @Prop() imageTwo: string;
@@ -37,8 +34,6 @@ export class StereoScope {
           ? <img src={this.imageOne} />
           : <img src={this.imageTwo} />
         }
-        <canvas id="c"></canvas>
-        Speed: {this.speed} {this.speedHalf}
       </div>
     );
   }
@@ -74,13 +69,6 @@ export class StereoScope {
   componentDidUnload() {
     // console.log('The view has been removed from the DOM');
   }
-
-
-  // // Source: https://stackoverflow.com/questions/14757659/loading-an-image-onto-a-canvas-with-javascript
-  // async preloadImage() {
-  //   let img = await this.loadImage("http://cloud.bitflower.net/a/c.jpg");
-  //   // ctx.drawImage(img, 0, 0);     
-  // }
 
 
   loadImage(url) {
@@ -130,11 +118,9 @@ export class StereoScope {
           i = 0;
         }
 
-      //   canvas.renderAll();
         window.requestAnimationFrame(animate);
       }
 
-      // setTimeout(animate, 1000);
       animate();
 
   }
