@@ -1,6 +1,6 @@
 {
   "name": "@stencil/starter",
-  "private": true,
+  "private": false,
   "version": "0.0.1",
   "description": "Stencil stereo scope image component",
   "files": [
