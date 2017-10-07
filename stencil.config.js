@@ -1,4 +1,7 @@
 exports.config = {
+  namespace: 'stereoscope',
+  generateDistribution: true,
+  generateWWW: false,
   bundles: [
     { components: ['stereo-scope'] }
   ],
@@ -10,4 +13,4 @@ exports.config = {
 exports.devServer = {
   root: 'www',
   watchGlob: '**/**'
-}
+};
