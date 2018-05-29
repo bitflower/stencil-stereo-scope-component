@@ -6,10 +6,10 @@
   "files": [
     "dist/"
   ],
-  "main": "dist/collection/index.js",
-  "types": "dist/collection/index.d.ts",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",
-  "browser": "dist/stereoscope.js",
   "scripts": {
     "build": "stencil build --prerender",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
+    "@stencil/sass": "0.0.5",
     "@stencil/utils": "0.0.4",
     "@types/jest": "^21.1.10",
     "jest": "^21.2.1"

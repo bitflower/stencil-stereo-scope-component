@@ -1,12 +1,18 @@
+const sass = require('@stencil/sass');
+
 exports.config = {
   namespace: 'stereoscope',
-  generateDistribution: true,
-  generateWWW: false,
-  bundles: [
-    { components: ['stereo-scope'] }
+  outputTargets: [
+    {
+      type: 'dist'
+    },
+    {
+      type: 'www',
+      serviceWorker: false
+    }
   ],
-  collections: [
-    { name: '@stencil/router' }
+  plugins: [
+    sass()
   ]
 };
 

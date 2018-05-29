@@ -4,35 +4,62 @@
  * and imports for stencil collections that might be configured in your stencil.config.js file
  */
 
-import '@stencil/router';
+import '@stencil/core';
 
-import { StereoScope as StereoScope } from './components/stereo-scope/stereo-scope';
-
-interface HTMLStereoScopeElement extends StereoScope, HTMLElement {
-}
-declare var HTMLStereoScopeElement: {
-  prototype: HTMLStereoScopeElement;
-  new (): HTMLStereoScopeElement;
-};
 declare global {
+  namespace JSX {
+    interface Element {}
+    export interface IntrinsicElements {}
+  }
+  namespace JSXElements {}
+
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+
+    forceUpdate(): void;
+  }
+
+  interface HTMLAttributes {}
+}
+
+
+declare global {
+
+  namespace StencilComponents {
+    interface StereoScope {
+      'imageOne': string;
+      'imageTwo': string;
+      'showSpeedRange': string;
+    }
+  }
+
+  interface HTMLStereoScopeElement extends StencilComponents.StereoScope, HTMLStencilElement {}
+
+  var HTMLStereoScopeElement: {
+    prototype: HTMLStereoScopeElement;
+    new (): HTMLStereoScopeElement;
+  };
   interface HTMLElementTagNameMap {
-      "stereo-scope": HTMLStereoScopeElement;
+    'stereo-scope': HTMLStereoScopeElement;
   }
   interface ElementTagNameMap {
-      "stereo-scope": HTMLStereoScopeElement;
+    'stereo-scope': HTMLStereoScopeElement;
   }
   namespace JSX {
-      interface IntrinsicElements {
-          "stereo-scope": JSXElements.StereoScopeAttributes;
-      }
+    interface IntrinsicElements {
+      'stereo-scope': JSXElements.StereoScopeAttributes;
+    }
   }
   namespace JSXElements {
-      export interface StereoScopeAttributes extends HTMLAttributes {
-        
-          showSpeedRange?: any,
-          imageOne?: any,
-          imageTwo?: any
-      }
+    export interface StereoScopeAttributes extends HTMLAttributes {
+      'imageOne'?: string;
+      'imageTwo'?: string;
+      'showSpeedRange'?: string;
+    }
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }
+
+export declare function defineCustomElements(window: any): void;
