@@ -6,7 +6,6 @@
   "files": [
     "dist/"
   ],
-
   "main": "dist/collection/index.js",
   "types": "dist/collection/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
@@ -20,13 +19,13 @@
     "test.watch": "jest --watch --no-cache"
   },
   "dependencies": {
-    "@stencil/core": "next",
+    "@stencil/core": "^0.9.5",
     "@stencil/router": "latest"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",
-    "@stencil/utils": "latest",
-    "@types/jest": "^21.1.1",
+    "@stencil/utils": "0.0.4",
+    "@types/jest": "^21.1.10",
     "jest": "^21.2.1"
   },
   "repository": {
